@@ -1,0 +1,122 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chatcontainer {
+  width: 350px;
+  height: 600px;
+  background-color: #1f1f1f;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+
+.chatheader {
+  background-color: #4a00e0;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatheader .chatbot-icon {
+  width: 30px;
+  height: 30px;
+  background: url('path/to/chatbot-icon.png') no-repeat center center / contain;
+  margin-right: 10px;
+}
+
+.chatbox {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #2c2c2c;
+  display: flex;
+  flex-direction: column; /* Stack messages vertically */
+  gap: 10px; /* Space between messages */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none;  /* Hide scrollbar in IE and Edge */
+}
+
+/* Hide scrollbar in WebKit-based browsers (Chrome, Safari) */
+.chat-box::-webkit-scrollbar {
+  display: none;
+}
+
+.inputcontainer {
+  display: flex;
+  padding: 10px;
+  background-color: #333;
+  border-top: 1px solid #444;
+  font-family: cursive;
+}
+
+#userinputs {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #444;
+  color: #fff;
+  margin-right: 10px;
+  font-family: cursive;
+}
+
+#sendbtn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background-color: #4a00e0;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: cursive;
+}
+
+#sendbtn:hover {
+  background-color: #6610f2;
+}
+
+#chats > div {
+  max-width: 80%; /* Adjusts to 80% of the container width */
+  display: inline-block; /* Allows bubble to adjust size to the content */
+  word-wrap: break-word; /* Break long words if needed */
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: #fff;
+}
+
+#chats > div.user {
+  background-color: #663399;
+  align-self: flex-end;
+  text-align: right;
+  font-family: cursive;
+}
+
+#chats > div.Niko {
+  background-color: #4a00e0;
+  align-self: flex-start;
+  text-align: left;
+  font-family: cursive;
+}
+
+#chats > div.prompt {
+  font-style: italic;
+  color: #888;
+}
+
+
